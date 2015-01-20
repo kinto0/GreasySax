@@ -1,0 +1,99 @@
+.navbar {
+	border-color:#101010;	
+}
+.jumbotron {
+	padding:100px;
+	color:white;
+	margin-bottom:0px;
+	background-image: url(../images/TalkativeWelloffFunnelweaverspider.gif);-->
+	text-align:center;
+		height: 500px;
+	 /* fix background */
+  	background-attachment: fixed;
+  	/* center it */
+  	background-position: center center;
+	 /* Scale it to the element */
+	 background-size: cover;
+	 position: relative;
+
+	 /* just make it look a bit better ;) */
+	 &:nth-child(2n) {
+	 	box-shadow: inset 0 0 1em #111;
+	 }
+}
+.background2{
+	margin-bottom:0px;
+	background-image: url(../images/SNL_1567_Short_The_Curse.png);-->
+	text-align:center;
+		height: 500px;
+	 /* fix background */
+  	background-attachment: fixed;
+  	/* center it */
+  	background-position: center center;
+	 /* Scale it to the element */
+	 background-size: cover;
+	 position: relative;
+}
+.background3{
+	margin-bottom:0px;
+	background-image: url(../images/FIK1X2OH7ME317L.LARGE.jpg);-->
+	text-align:center;
+		height: 500px;
+	 /* fix background */
+  	background-attachment: fixed;
+  	/* center it */
+  	background-position: center center;
+	 /* Scale it to the element */
+	 background-size: cover;
+	 position: relative;
+
+}
+.jumbotron h1{
+	padding-bottom:50px;
+}
+.jumbotron p{
+	padding-bottom:25px;
+}
+.jumbotron mark{
+	background-color: #222222;
+	color: white;
+}
+.container hr{
+	width:200px;
+	border-color:grey;
+}
+.container{
+	text-align: center;
+}
+#about { 
+	padding:50px;
+	background-color: #E4E4E4;
+ 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+#roster{
+	padding:50px;
+}
+#contact{
+	padding:50px;
+	background-color: #E4E4E4;
+}
+#footer{
+	background-color:#222;
+	padding-top:150px;
+	padding-bottom:30px;
+	position:relative;
+}
+#footer p{
+	color:white;
+}
+.circle {
+	border-radius: 50% 50% 50% 50%;
+	border:3px solid #333;
+	height:100px;
+	width: 100px;
+}
+#back-to-top {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
