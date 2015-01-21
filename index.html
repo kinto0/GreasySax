@@ -64,7 +64,7 @@
       <div class="container">
 
         <h1><b>Greasy Sax</b></h1>
-        <p>Watch the ESEA Open game at <a href="http://www.twitch.tv/vndMoose_">http://www.twitch.tv/vndMoose_</a> or <mark>connect 54.226.87.155:29626</mark></p>
+        <p>Watch the ESEA Open game at <a href="http://www.twitch.tv/vndMoose_">http://www.twitch.tv/vndMoose_</a> or visit the thread <a href="http://www.joinsg.net/topic/64575-support-your-local-gs-squad/">here</a></p>
         <a class="btn btn-default btn-lg smoothScroll" href="#roster" role="button">See Roster »</a>
       </div>
     </div>
@@ -102,17 +102,17 @@
         </div>
     <div class="col-md-2">
         	<img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c3/c32e766e6d0a2d58bd0e2b9f159c3ed7ce2f9042_full.jpg" alt="Splewis" class="circle">
-          <h2>Travesty</h2>
+          <h2>Wind</h2>
           <p>put some shitty description or something about everyone here</p>
        </div>
     <div class="col-md-2">
         	<img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c3/c32e766e6d0a2d58bd0e2b9f159c3ed7ce2f9042_full.jpg" alt="Splewis" class="circle">
-          <h2>Wind</h2>
+          <h2>Sakata</h2>
           <p>put some shitty description or something about everyone here</p>
         </div>
     <div class="col-md-2">
         	<img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c3/c32e766e6d0a2d58bd0e2b9f159c3ed7ce2f9042_full.jpg" alt="Splewis" class="circle">
-          <h2>Sakata</h2>
+          <h2>Travesty</h2>
           <p>put some shitty description or something about everyone here</p>
         </div>
     <div class="col-md-2">
@@ -122,7 +122,7 @@
           </div>
     <div class="col-md-2">
         	<img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c3/c32e766e6d0a2d58bd0e2b9f159c3ed7ce2f9042_full.jpg" alt="Splewis" class="circle">
-          <h2>Dutchmcfinner</h2>
+          <h2>Moose</h2>
           <p>put some shitty description or something about everyone here</p>
 
        </div>
@@ -151,6 +151,66 @@
    <footer>
    <div id="footer">
     <div class="container">
+	<script>
+		var playbtn, back, forward, songNumber;
+		var songs = ["./music/careless_whisper.mp3", "./music/midnight_city_cut.mp3", "./music/smooth_operator.mp3", "./music/songbird.mp3", "./music/true.mp3", "./music/baker-street.mp3"];
+	 	  function initAudioPlayer() {
+	 	  	audio = new Audio();
+	 	  	audio.src = "./music/careless_whisper.mp3";
+	 	  	songNumber = 0;
+	 	  	audio.loop = true;
+	 	  	audio.play();
+
+	 	  	playbtn = document.getElementById("pause");
+	 	  	back = document.getElementById('backward');
+	 	  	forward = document.getElementById('forward');
+
+
+	 	  	playbtn.addEventListener("click", playPause);
+	 	  	back.addEventListener("click", previousSong);
+	 	  	forward.addEventListener("click", nextSong);
+
+	 	  	function playPause(){
+	 	  		if(audio.paused){
+		 	  		audio.play();
+	 	  			document.getElementById(playbtn).className="fa fa-pause fa-stack fa-inverse";
+	 	  		}
+	 	  		else{
+	 	  			audio.pause();
+	 	  			document.getElementById(playbtn).className="fa fa-play fa-stack fa-inverse";
+	 	  		}
+	 	  	}
+	 	  	function nextSong(){
+	 	  		audio.pause();
+	 	  		if(songNumber == 6){
+	 	  			songNumber = -1;
+	 	  		}
+	 	  		else{
+	 	  			audio.src = songs[songNumber + 1];
+
+	 	  		}
+	 	  		songNumber = songNumber + 1;
+	 	  		audio.play();
+	 	  	}
+	 	  	function previousSong(){
+	 	  		audio.pause();
+	 	  		if(songNumber == 0){
+	 	  			songNumber = 7;
+	 	  		}
+	 	  		else{
+	 	  			audio.src = songs[songNumber - 1];
+
+	 	  		}
+	 	  		songNumber = songNumber - 1;
+	 	  		audio.play();
+	 	  	}
+	  	 }
+	 window.addEventListener("load", initAudioPlayer);
+	</script>
+    	<p><center>Audio Controls</center></p>
+    	  <a id="backward" class="fa fa-fast-backward fa-stack fa-inverse" role="button"></a>
+    	  <a id="pause" class="fa fa-pause fa-stack fa-inverse" role="button"></a>
+    	  <a id="forward" class="fa fa-fast-forward fa-stack fa-inverse" role="button"></a>
       <p><center>&copy; Greasy Sax 2015</center></p>
     </div>
     <div id="back-to-top">
@@ -168,9 +228,8 @@
     <script src="./index_files/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./index_files/ie10-viewport-bug-workaround.js"></script>
-    <embed src="./music/careless_whisper.mp3" autostart="true" loop="true"
+   <!-- <embed src="./music/careless_whisper.mp3" autostart="true" loop="true"
 	width="2" height="0">
-	</embed>
-  
+	</embed>-->  
 
 <style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body></html>

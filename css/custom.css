@@ -83,8 +83,12 @@
 	padding-bottom:30px;
 	position:relative;
 }
-#footer p{
-	color:white;
+.footer p{
+	color:#E4E4E4;
+}
+.footer button{
+	background:transparent;
+	border:none;
 }
 .circle {
 	border-radius: 50% 50% 50% 50%;
